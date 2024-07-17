@@ -1,0 +1,2 @@
+# miny
+the miny website
