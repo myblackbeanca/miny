@@ -1,0 +1,12 @@
+{
+  "name": "miny-website",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx tailwindcss -i ./styles/input.css -o ./public/out.css",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "tailwindcss": "^2.2.19"
+  }
+}
