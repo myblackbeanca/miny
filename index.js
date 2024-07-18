@@ -1,4 +1,3 @@
-// index.js
 const { exec } = require('child_process');
 const path = require('path');
 const express = require('express');
@@ -11,15 +10,15 @@ exec('npx tailwindcss -i ./styles/input.css -o ./public/out.css', (err, stdout, 
     return;
   }
   console.log(stdout);
-
+  
   // Serve static files from the 'public' directory
   app.use(express.static(path.join(__dirname, 'public')));
 
-  // Serve HTML pages from the 'pages' directory
-  app.use(express.static(path.join(__dirname, 'pages')));
+  // Serve HTML pages from the root directory
+  app.use(express.static(__dirname));
 
   app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, 'pages/index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
   });
 
   app.listen(3000, () => {
