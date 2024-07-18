@@ -1,20 +1,15 @@
-// vercel.json
 {
   "version": 2,
   "builds": [
     {
       "src": "index.js",
       "use": "@vercel/node"
-    },
-    { 
-      "src": "public/**", // Serve all files in the 'public' directory as static
-      "use": "@vercel/static" 
     }
   ],
   "routes": [
     {
-      "src": "/(.*)", // Route all requests to your Node.js server
-      "dest": "index.js" 
+      "src": "/(.*)",
+      "dest": "/index.js"
     }
   ]
 }
