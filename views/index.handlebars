@@ -1,0 +1,82 @@
+{{#extend "main"}}
+  {{#block "body"}}
+    <header>
+      {{> header}}
+    </header>
+    <main>
+      <!-- Your home page content goes here -->
+      <section class="hero bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('img/hero-bg.jpg');">
+        <div class="text-center text-white">
+          <h1 class="text-4xl md:text-6xl font-bold">Minyvinyl: Bridging the Gap Between Fans and Artists</h1>
+          <p class="text-xl md:text-2xl mt-4">Create, Share, and Collect Limited-Edition Miny Playlists</p>
+          <div class="mt-8">
+            <a href="#minyfy" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Get Started with MINYFY</a>
+            <a href="#rapid-connect" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full ml-4">Get Started with Rapid Connect</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section id="how-it-works" class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8">How It Works</h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="p-4">
+              <img src="img/create.svg" alt="Create" class="h-24 mx-auto mb-4">
+              <h3 class="text-xl font-bold mb-2">Create</h3>
+              <p>Design and customize your Miny playlist with ease.</p>
+            </div>
+            <div class="p-4">
+              <img src="img/customize.svg" alt="Customize" class="h-24 mx-auto mb-4">
+              <h3 class="text-xl font-bold mb-2">Customize</h3>
+              <p>Personalize your playlist with unique artwork and descriptions.</p>
+            </div>
+            <div class="p-4">
+              <img src="img/share.svg" alt="Share" class="h-24 mx-auto mb-4">
+              <h3 class="text-xl font-bold mb-2">Share</h3>
+              <p>Share your Miny playlist with friends and fans.</p>
+            </div>
+            <div class="p-4">
+              <img src="img/enjoy.svg" alt="Enjoy" class="h-24 mx-auto mb-4">
+              <h3 class="text-xl font-bold mb-2">Enjoy</h3>
+              <p>Listen to and enjoy the unique playlists created by the community.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Playlists Section -->
+      <section id="featured-playlists" class="py-16">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-bold mb-8">Featured Playlists</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Playlist Item -->
+            <div class="bg-white p-4 rounded shadow">
+              <img src="img/playlist1.jpg" alt="Playlist 1" class="w-full rounded mb-4">
+              <h3 class="text-xl font-bold mb-2">Playlist 1</h3>
+              <p class="mb-4">Curated by Artist Name</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Pre-Order Now</a>
+            </div>
+            <!-- Playlist Item -->
+            <div class="bg-white p-4 rounded shadow">
+              <img src="img/playlist2.jpg" alt="Playlist 2" class="w-full rounded mb-4">
+              <h3 class="text-xl font-bold mb-2">Playlist 2</h3>
+              <p class="mb-4">Curated by Artist Name</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Pre-Order Now</a>
+            </div>
+            <!-- Playlist Item -->
+            <div class="bg-white p-4 rounded shadow">
+              <img src="img/playlist3.jpg" alt="Playlist 3" class="w-full rounded mb-4">
+              <h3 class="text-xl font-bold mb-2">Playlist 3</h3>
+              <p class="mb-4">Curated by Artist Name</p>
+              <a href="#" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">Pre-Order Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      {{> footer}}
+    </footer>
+  {{/block}}
+{{/extend}}

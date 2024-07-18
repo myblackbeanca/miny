@@ -1,23 +1,29 @@
 const express = require("express");
 const path = require("path");
 const exphbs = require("express-handlebars");
+
 const app = express();
 
-// Set up Handlebars as the view engine
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// Set Handlebars as the template engine
+app.engine(
+  "handlebars",
+  exphbs({
+    defaultLayout: "main",
+    layoutsDir: path.join(__dirname, "views/layouts"),
+    partialsDir: path.join(__dirname, "views/partials"),
+  })
+);
 app.set("view engine", "handlebars");
-
-// Set the 'views' directory for your Handlebars templates
 app.set("views", path.join(__dirname, "views"));
 
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, "public")));
 
-// Routes
+// Serve HTML pages from the root directory
+app.use(express.static(__dirname));
+
 app.get("/", (req, res) => {
-  res.render("index", { title: "MINY - Home" }); // Render 'index.handlebars'
+  res.render("index", { title: "Minyvinyl" });
 });
 
-// Add other routes for your pages (e.g., /features, /artists, etc.)
-
-// No need for app.listen in CodeSandbox, it handles the server
+// Remove app.listen - CodeSandbox handles the server
